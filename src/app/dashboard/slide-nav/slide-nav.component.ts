@@ -6,15 +6,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./slide-nav.component.css']
 })
 export class SlideNavComponent implements OnInit {
-  
+  slideOpen: any = false;
+  slideDown: any = false;
+
   constructor() { }
 
   ngOnInit() {
   }
-  toggled = false;
+  changeSlide(): void {
 
-  onToggle() {
-    this.toggled = !this.toggled;
+    this.slideOpen = !this.slideOpen;
   }
+  changedown(): void {
+    this.slideDown = !this.slideDown;
 
+  }
 }

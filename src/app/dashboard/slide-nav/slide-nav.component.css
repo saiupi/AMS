@@ -39,7 +39,7 @@
     background-color: #343957;
 }
 .fa{
-    margin-right: 20px;
+    margin-right: 25px;
     margin-left: 15px;
 }
 a{
@@ -58,13 +58,10 @@ h6{
     color: rgb(182, 182, 182);
    
 }
-.fa-arrow-down{
-    transform: rotate(0deg);
-    transition: transform 1s linear;
-  }
-  
-  .fa-arrow-down.open{
-    transform: rotate(180deg);
-    transition: transform 1s linear;
-  }
-  
+.fa {
+    transition: all .6s linear;
+    font-size: 15px;
+}
+.clicked {
+    transform:rotate(180deg);
+}
