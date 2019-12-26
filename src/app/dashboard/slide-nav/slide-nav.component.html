@@ -1,0 +1,52 @@
+<div class="  border-right" id="sidebar-wrapper">
+  <div class="sidebar text-light" align="center">Ojas</div><br><br>
+
+  <div class="list-group list-group-flush">
+
+    <div class="wrapper">
+      <aside class="main_sidebar">
+
+        <div>
+          <div id="bhover">
+            <a data-toggle="collapse" href="#collapseReports" role="button" aria-expanded="false"
+              aria-controls="collapseExample"><i class="fa fa-id-card" aria-hidden="true"></i> Reports <span
+                class="fa fa-chevron-down float-right"></span></a>
+          </div>
+          <ul class="collapse" id="collapseReports">
+            <li>
+              <h6 [routerLink]="['allEmployees']">All Employees</h6>
+            </li>
+          </ul>
+        </div>
+        <div><br>
+          <div id="bhover">
+            <a data-toggle="collapse" href="#collapseAdmin" role="button" aria-expanded="false"
+              aria-controls="collapseExample"><i class="fa fa-user-circle" aria-hidden="true"></i> Admin <span
+                class="fa fa-chevron-down float-right"></span></a>
+          </div>
+          <ul class="collapse" id="collapseAdmin">
+            <li>
+              <h6 [routerLink]="['clients']" > Clients</h6>
+            </li>
+            <li>
+              <h6 [routerLink]="['assignments']" > Assignments</h6>
+            </li>
+            <li>
+              <h6 [routerLink]="['employees']" > Employees</h6>
+            </li>
+            <li>
+              <h6 [routerLink]="['assignmentClient']" > Assignment-Clinet Link</h6>
+            </li>
+            <li>
+              <h6 [routerLink]="['assignmentEmployee']" >Assignment-Employee Link</h6>
+            </li>
+          </ul>
+
+        </div>
+      </aside>
+
+    </div>
+  </div>
+
+</div>
+<span class="navbar-brand fas fa-align-justify text-info" id="menu-toggle" (click)="onToggle()"></span>
