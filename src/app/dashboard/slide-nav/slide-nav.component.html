@@ -12,7 +12,7 @@
             aria-controls="collapseExample" class="text-light">
             <a data-toggle="collapse" href="#collapseReports" role="button" aria-expanded="false"
               aria-controls="collapseExample"><i class="fa fa-id-card text-secondary" aria-hidden="true"></i> Reports
-              <span class="fa fa-chevron-down text-secondary float-right" [class.clicked]="slideOpen"></span></a>
+              <span class="fa fa-chevron-down text-light float-right" [class.clicked]="slideOpen"></span></a>
           </div>
           <ul class="collapse" id="collapseReports">
             <li [routerLink]="['allEmployees']">
@@ -29,7 +29,7 @@
             data-toggle="collapse" href="#collapseAdmin" role="button" aria-expanded="false"
             aria-controls="collapseExample" class="text-light">
             <a><i class="fa fa-user-circle text-secondary" aria-hidden="true"></i> Admin <span
-                class="fa fa-chevron-down text-secondary float-right" [class.clicked]="slideDown"></span></a>
+                class="fa fa-chevron-down text-light float-right" [class.clicked]="slideDown"></span></a>
           </div>
           <ul class="collapse" id="collapseAdmin">
             <li [routerLink]="['clients']">

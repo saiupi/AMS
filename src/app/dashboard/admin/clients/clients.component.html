@@ -4,7 +4,7 @@
         <form>
             <div class="row">
                 <div class="col-sm-6 col-md-8 col-lg-4 col-xl-4 ">
-                    
+
                     <!-- <span class="has-float-label">
                         <input class="form-control" id="first" type="text" placeholder="name"/>
                         <label for="client">client name</label>
@@ -38,38 +38,39 @@
 <div class="card shadow bg-white rounded">
     <h5 class="card-header bg-secondary text-light">Clients list</h5>
     <div class="card-body ">
+        <div class="table-responsive">
+            <table class="table table-hover table-bordered ">
+                <thead>
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Client Code</th>
+                        <th scope="col">Client Name</th>
 
-        <table class="table table-hover table-bordered ">
-            <thead>
-                <tr>
-                    <th scope="col">ID</th>
-                    <th scope="col">Client Code</th>
-                    <th scope="col">Client Name</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>k260</td>
+                        <td>mahe</td>
 
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <th scope="row">1</th>
-                    <td>k260</td>
-                    <td>mahe</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>k260</td>
+                        <td>navee</td>
 
-                </tr>
-                <tr>
-                    <th scope="row">2</th>
-                    <td>k260</td>
-                    <td>navee</td>
+                    </tr>
 
-                </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>k260</td>
+                        <td>sai</td>
 
-                <tr>
-                    <th scope="row">3</th>
-                    <td>k260</td>
-                    <td>sai</td>
-
-                </tr>
-            </tbody>
-        </table>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
     <pagination-controls (pageChange)="p = $event" class="pagination pg-blue justify-content-end ">
     </pagination-controls>
