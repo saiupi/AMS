@@ -23,6 +23,9 @@ import { AssignmentClinetLinkComponent } from './dashboard/admin/assignment-clin
 import { AssignmentEmployeeLinkComponent } from './dashboard/admin/assignment-employee-link/assignment-employee-link.component';
 import { ServerNotFoundComponent } from './server-not-found/server-not-found.component';
 import {NgxPaginationModule} from 'ngx-pagination';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { RegistorComponent } from './registor/registor.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +42,8 @@ import {NgxPaginationModule} from 'ngx-pagination';
     EmployeesComponent,
     AssignmentClinetLinkComponent,
     AssignmentEmployeeLinkComponent,
-    ServerNotFoundComponent
+    ServerNotFoundComponent,
+    RegistorComponent
   ],
   imports: [
     BrowserModule,
@@ -51,7 +55,9 @@ import {NgxPaginationModule} from 'ngx-pagination';
     MatCardModule,
     MatInputModule,
     MatButtonModule,
-    NgxPaginationModule
+    NgxPaginationModule,
+    HttpClientModule,
+    FormsModule,ReactiveFormsModule
     
   ],
   providers: [],

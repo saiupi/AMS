@@ -39,8 +39,8 @@
     background-color: #343957;
 }
 .fa{
-    margin-right: 25px;
-    margin-left: 15px;
+  
+   
 }
 a{
 color: beige;
@@ -64,4 +64,7 @@ h6{
 }
 .clicked {
     transform:rotate(180deg);
+}
+.float-right{
+    margin-top:5px;
 }

@@ -1,40 +1,114 @@
 <br>
-<h5>Reports <span class="text-info">(Attendance-In time/Out time)</span></h5><br>
+<div class="card-body  ">
+    <form>
+        <div class="row">
+            <div class="col-sm">
+                <label class="input-group">Name</label>
+
+                <div class="input-group">
+
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="fa fa-user-circle"></i></span>
+                    </div>
+                    <input type="text" class="form-control" placeholder="Name" id="usr" name="username">
+                </div>
+            </div>
+            <div class="col-sm">
+                <label class="input-group">Father Name</label>
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="fa fa-user-circle"></i></span>
+                    </div>
+                    <input type="text" class="form-control" placeholder="Father Name" id="usr" name="username">
+                </div>
+            </div>
+            <div class="col-sm">
+                <label class="input-group">Mother Name</label>
+
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="fa fa-user-circle"></i></span>
+                    </div>
+                    <input type="text" class="form-control" placeholder="Mother Name" id="usr" name="username">
+                </div>
+            </div>
+
+        </div><br>
+
+        <div class="row">
+            <div class="col-sm">
+                <label class="input-group">Date of Birthday</label>
+
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="fa fa-user-circle"></i></span>
+                    </div>
+                    <input type="date" class="form-control" placeholder="Date of Birthday" id="usr" name="username">
+                </div>
+            </div>
+            <div class="col-sm">
+                <label class="input-group">Mobile Number</label>
+
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="fa fa-user-circle"></i></span>
+                    </div>
+                    <input type="text" class="form-control" placeholder="Mobile Number" id="usr" name="username">
+                </div>
+            </div>
+            <div class="col-sm">
+                <label class="input-group">Date of Join</label>
+
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="fa fa-user-circle"></i></span>
+                    </div>
+                    <input type="date" class="form-control" placeholder="Date of Join" id="usr" name="username">
+                </div>
+            </div>
+
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-sm">
+                <label class="input-group">Select Gender</label>
+                <div class="input-group">
+
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="fa fa-user-circle"></i></span>
+                    </div>
+                    <select class="form-control" id="exampleFormControlSelect2">
+                        <option selected>select option</option>
+                        <option>male</option>
+                        <option>fe-male</option>
+
+                    </select>
+                </div>
+            </div>
+            <div class="col-sm">
+
+            </div>
+            <div class="col-sm">
+
+            </div>
+
+        </div><br>
+        <button type="submit" class="btn btn-primary">Submit</button>&nbsp;&nbsp;
+        <button type="submit" class="btn btn-secondary">Cancel</button>
+    </form>
+</div>
+<br>
+
 <div>
     <div class="card shadow bg-white rounded">
-        <h5 class="card-header text-success">Worker time Sheet</h5>
+        <h5 class="card-header text-success">Student Details</h5>
         <div class="card-body ">
-            <!-- <div class="row pl-3 ">
 
-                <div class="col-4">
-                    <div class=" text-info">Worker time Sheet
-                    </div>
-                </div>
-    
-                <div class="col-8 ">
-                    
-                    <i class="fa fa-user-circle float-right pl-2" aria-hidden="true"></i>
-                    <i class="fa fa-user-circle float-right pl-2" aria-hidden="true"></i>
-                    <i class="fa fa-user-circle float-right pl-2" aria-hidden="true"></i>
-                </div>
-            </div> -->
             <div class="form-row p-1">
                 <div class="col-5 text-info">
                     <h6>All worker in/out time data is available here</h6>
                 </div>
 
-                <!-- <div class="col-2">
-                    <div class=" text-info">
-                        <div class="form-group">
-                         
-                            <select class="form-control input-sm " id="sel3">
-                              <option>1</option>
-                              <option>2</option>
-                              <option>3</option>
-                            </select>
-                          </div>
-                    </div>
-                </div> -->
                 <div class="col-4">
 
                 </div>
@@ -49,11 +123,16 @@
                     <thead>
                         <tr>
                             <th scope="col">#</th>
-                            <th scope="col">Employee Code</th>
-                            <th scope="col">Employee Name</th>
-                            <th scope="col">Date</th>
-                            <th scope="col">In Time</th>
-                            <th scope="col">Out Time</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Father Name</th>
+                            <th scope="col">Mother Name</th>
+                            <th scope="col">Date of Birthday</th>
+                            <th scope="col">Mobile Number</th>
+                            <th scope="col">Date of Join</th>
+                            <th scope="col">Gender</th>
+                            <th scope="col">Action</th>
+
+
                         </tr>
                     </thead>
                     <tbody>
@@ -64,6 +143,12 @@
                             <td>20/01/1998</td>
                             <td>9:30</td>
                             <td>19:30</td>
+                            <td>9:30</td>
+                            <td>19:30</td>
+                            <td>
+                                <button type="submit" class="btn btn-info">Edit</button>&nbsp;&nbsp;
+                                <button type="submit" class="btn btn-danger">Delete</button>
+                            </td>
                         </tr>
                         <tr>
                             <th scope="row">2</th>
@@ -72,15 +157,12 @@
                             <td>20/01/2014</td>
                             <td>9:30</td>
                             <td>20:30</td>
-                        </tr>
-
-                        <tr>
-                            <th scope="row">3</th>
-                            <td>k260</td>
-                            <td>sai</td>
-                            <td>20/01/1258</td>
                             <td>9:30</td>
-                            <td>18:30</td>
+                            <td>19:30</td>
+                            <td>
+                                <button type="submit" class="btn btn-info">Edit</button>&nbsp;&nbsp;
+                                <button type="submit" class="btn btn-danger">Delete</button>
+                            </td>
                         </tr>
                     </tbody>
                 </table>

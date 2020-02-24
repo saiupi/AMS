@@ -9,6 +9,7 @@ import { AssignmentsComponent } from './dashboard/admin/assignments/assignments.
 import { ClientsComponent } from './dashboard/admin/clients/clients.component';
 import { EmployeesComponent } from './dashboard/admin/employees/employees.component';
 import { ServerNotFoundComponent } from './server-not-found/server-not-found.component';
+import { RegistorComponent } from './registor/registor.component';
 
 
 
@@ -18,7 +19,7 @@ const routes: Routes = [
     redirectTo: 'login',
     pathMatch: 'full'
   },
-
+  { path: 'registor', component: RegistorComponent },
   { path: 'login', component: LoginComponent },
   {
     path: '', redirectTo: 'login', pathMatch: 'full',

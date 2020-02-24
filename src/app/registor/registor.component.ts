@@ -1,17 +1,14 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
-import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
-export interface Food {
-  value: string;
-  viewValue: string;
-}
+import { Router } from '@angular/router';
+
 @Component({
-  selector: 'app-login',
-  templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+  selector: 'app-registor',
+  templateUrl: './registor.component.html',
+  styleUrls: ['./registor.component.css']
 })
-export class LoginComponent implements OnInit {
+export class RegistorComponent implements OnInit {
 
   registerForm: FormGroup;
   submitted = false;
