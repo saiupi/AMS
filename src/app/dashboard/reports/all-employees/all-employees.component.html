@@ -1,6 +1,6 @@
 <br>
 <div class="card-body  ">
-    <form>
+    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
         <div class="row">
             <div class="col-sm">
                 <label class="input-group">Name</label>
@@ -10,7 +10,11 @@
                     <div class="input-group-prepend">
                         <span class="input-group-text"><i class="fa fa-user-circle"></i></span>
                     </div>
-                    <input type="text" class="form-control" placeholder="Name" id="usr" name="username">
+                    <input type="text" formControlName="name" class="form-control"
+                        [ngClass]="{ 'is-invalid': submitted && f.name.errors }" />
+                    <div *ngIf="submitted && f.name.errors" class="invalid-feedback">
+                        <div *ngIf="f.name.errors.required">First Name is required</div>
+                    </div>
                 </div>
             </div>
             <div class="col-sm">
@@ -19,7 +23,11 @@
                     <div class="input-group-prepend">
                         <span class="input-group-text"><i class="fa fa-user-circle"></i></span>
                     </div>
-                    <input type="text" class="form-control" placeholder="Father Name" id="usr" name="username">
+                    <input type="text" formControlName="father_name" class="form-control"
+                        [ngClass]="{ 'is-invalid': submitted && f.father_name.errors }" />
+                    <div *ngIf="submitted && f.father_name.errors" class="invalid-feedback">
+                        <div *ngIf="f.father_name.errors.required">First Name is required</div>
+                    </div>
                 </div>
             </div>
             <div class="col-sm">
@@ -29,7 +37,11 @@
                     <div class="input-group-prepend">
                         <span class="input-group-text"><i class="fa fa-user-circle"></i></span>
                     </div>
-                    <input type="text" class="form-control" placeholder="Mother Name" id="usr" name="username">
+                    <input type="text" formControlName="mother_name" class="form-control"
+                        [ngClass]="{ 'is-invalid': submitted && f.mother_name.errors }" />
+                    <div *ngIf="submitted && f.mother_name.errors" class="invalid-feedback">
+                        <div *ngIf="f.mother_name.errors.required">First Name is required</div>
+                    </div>
                 </div>
             </div>
 
@@ -43,7 +55,11 @@
                     <div class="input-group-prepend">
                         <span class="input-group-text"><i class="fa fa-user-circle"></i></span>
                     </div>
-                    <input type="date" class="form-control" placeholder="Date of Birthday" id="usr" name="username">
+                    <input type="date" formControlName="date_of_birtday" class="form-control"
+                        [ngClass]="{ 'is-invalid': submitted && f.date_of_birtday.errors }" />
+                    <div *ngIf="submitted && f.date_of_birtday.errors" class="invalid-feedback">
+                        <div *ngIf="f.date_of_birtday.errors.required">First Name is required</div>
+                    </div>
                 </div>
             </div>
             <div class="col-sm">
@@ -53,7 +69,11 @@
                     <div class="input-group-prepend">
                         <span class="input-group-text"><i class="fa fa-user-circle"></i></span>
                     </div>
-                    <input type="text" class="form-control" placeholder="Mobile Number" id="usr" name="username">
+                    <input type="text" formControlName="mobile_number" class="form-control"
+                        [ngClass]="{ 'is-invalid': submitted && f.mobile_number.errors }" />
+                    <div *ngIf="submitted && f.mobile_number.errors" class="invalid-feedback">
+                        <div *ngIf="f.mobile_number.errors.required">First Name is required</div>
+                    </div>
                 </div>
             </div>
             <div class="col-sm">
@@ -63,7 +83,11 @@
                     <div class="input-group-prepend">
                         <span class="input-group-text"><i class="fa fa-user-circle"></i></span>
                     </div>
-                    <input type="date" class="form-control" placeholder="Date of Join" id="usr" name="username">
+                    <input type="date" formControlName="date_of_join" class="form-control"
+                        [ngClass]="{ 'is-invalid': submitted && f.date_of_join.errors }" />
+                    <div *ngIf="submitted && f.date_of_join.errors" class="invalid-feedback">
+                        <div *ngIf="f.date_of_join.errors.required">First Name is required</div>
+                    </div>
                 </div>
             </div>
 
@@ -77,10 +101,14 @@
                     <div class="input-group-prepend">
                         <span class="input-group-text"><i class="fa fa-user-circle"></i></span>
                     </div>
-                    <select class="form-control" id="exampleFormControlSelect2">
+                    <select class="form-control" formControlName="gender" id="exampleFormControlSelect2"
+                        class="form-control" [ngClass]="{ 'is-invalid': submitted && f.gender.errors }">
+                        <div *ngIf="submitted && f.gender.errors" class="invalid-feedback">
+                            <div *ngIf="f.gender.errors.required">First Name is required</div>
+                        </div>
                         <option selected>select option</option>
-                        <option>male</option>
-                        <option>fe-male</option>
+                        <option value="male">male</option>
+                        <option value="fe-male">fe-male</option>
 
                     </select>
                 </div>
@@ -136,34 +164,21 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>k260</td>
-                            <td>mahe</td>
-                            <td>20/01/1998</td>
-                            <td>9:30</td>
-                            <td>19:30</td>
-                            <td>9:30</td>
-                            <td>19:30</td>
+                        <tr *ngFor="let s of studentDetails; let i = index;">
+                            <th scope="row">{{i+1}}</th>
+                            <td>{{s.name}}</td>
+                            <td>{{s.father_name}}</td>
+                            <td>{{s.mother_name}}</td>
+                            <td>{{s.mobile_number}}</td>
+                            <td>{{s.date_of_birtday}}</td>
+                            <td>{{s.date_of_join}}</td>
+                            <td>{{s.gender}}</td>
                             <td>
                                 <button type="submit" class="btn btn-info">Edit</button>&nbsp;&nbsp;
                                 <button type="submit" class="btn btn-danger">Delete</button>
                             </td>
                         </tr>
-                        <tr>
-                            <th scope="row">2</th>
-                            <td>k260</td>
-                            <td>navee</td>
-                            <td>20/01/2014</td>
-                            <td>9:30</td>
-                            <td>20:30</td>
-                            <td>9:30</td>
-                            <td>19:30</td>
-                            <td>
-                                <button type="submit" class="btn btn-info">Edit</button>&nbsp;&nbsp;
-                                <button type="submit" class="btn btn-danger">Delete</button>
-                            </td>
-                        </tr>
+                       
                     </tbody>
                 </table>
             </div>

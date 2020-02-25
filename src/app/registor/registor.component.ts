@@ -9,7 +9,6 @@ import { Router } from '@angular/router';
   styleUrls: ['./registor.component.css']
 })
 export class RegistorComponent implements OnInit {
-
   registerForm: FormGroup;
   submitted = false;
   results: any;

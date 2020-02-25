@@ -21,7 +21,7 @@ export class LoginComponent implements OnInit {
 
   ngOnInit() {
     this.registerForm = this.formBuilder.group({
-      name: ['', Validators.required],
+     
       password: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
 
@@ -34,7 +34,7 @@ export class LoginComponent implements OnInit {
   onSubmit() {
     this.submitted = true;
     let adminProfile = {
-      name: this.registerForm.controls['name'].value,
+      
       password: this.registerForm.controls['password'].value,
       email: this.registerForm.controls['email'].value,
 
@@ -44,13 +44,18 @@ export class LoginComponent implements OnInit {
     if (this.registerForm.invalid) {
       return;
     }
-    this.http.post("http://192.168.3.235:3000/api/services/registor", adminProfile).subscribe((res) => {
+    this.http.post("http://192.168.3.235:3000/api/services/login",adminProfile).subscribe((res) => {
       this.results = res;
+      alert('SUCCESS!! :-)\n\n' + JSON.stringify(this.registerForm.value))
+
       this.myRoute.navigate(["/dashboard"]);
 
       console.log("44", this.results)
     })
-    alert('SUCCESS!! :-)\n\n' + JSON.stringify(this.registerForm.value))
+  }
+  goToRegister(){
+    this.myRoute.navigate(["/registor"]);
+
   }
 
 }
